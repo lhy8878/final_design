@@ -13,13 +13,28 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+
+import { useHistory } from 'react-router-dom';
+
 // Assets
 import signInImage from "assets/img/signInImage.png";
+import {$Login} from "../../apis/User/user.ts";
+
+
 
 function SignIn() {
   // Chakra color mode
   const titleColor = useColorModeValue("teal.300", "teal.200");
   const textColor = useColorModeValue("gray.400", "white");
+  const history = useHistory();
+  const handlerLogin = async(params) => {
+    const res = await $Login({username:"test1",password:"123"})
+    history.push('/admin/dashboard')
+  }
+  const handlerRegister = async(params) => {
+    // const res = await $Login({username:"test1",password:"123"})
+    history.push('/auth/signup')
+  }
   return (
     <Flex position='relative' mb='40px'>
       <Flex
@@ -95,7 +110,7 @@ function SignIn() {
                 mb='20px'
                 color='white'
                 mt='20px'
-                onClick={() => {console.log(1)}}
+                onClick={() => {handlerLogin()}}
                 _hover={{
                   bg: "teal.200",
                 }}
@@ -113,7 +128,7 @@ function SignIn() {
               mt='0px'>
               <Text color={textColor} fontWeight='medium'>
                 没有帐户？
-                <Link color={titleColor} as='span' ms='5px' fontWeight='bold'>
+                <Link onClick={() => handlerRegister()} color={titleColor} as='span' ms='5px' fontWeight='bold'>
                   立即注册
                 </Link>
               </Text>

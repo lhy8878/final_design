@@ -15,6 +15,9 @@ const Card = {
       width: "100%",
       boxShadow: "0px 3.5px 5.5px rgba(0, 0, 0, 0.02)",
       borderRadius: "15px",
+      _hover: {
+        background: "rgba(41,52,68,0.9)",
+      },
     }),
   },
   defaultProps: {

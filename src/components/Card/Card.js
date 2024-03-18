@@ -6,9 +6,7 @@ function Card(props) {
   // Pass the computed styles into the `__css` prop
   return (
     <Box __css={styles} {...rest}>
-      <Box __css={animationStyles}>
       {children}
-      </Box>
     </Box>
   );
 }

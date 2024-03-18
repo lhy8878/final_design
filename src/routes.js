@@ -1,6 +1,5 @@
 // import
 import Dashboard from "views/Dashboard/Dashboard";
-import Home from "views/Dashboard/Home";
 import Tables from "views/Dashboard/Tables";
 import Billing from "views/Dashboard/Billing";
 import RTLPage from "views/Dashboard/RTL";
@@ -25,14 +24,6 @@ var dashRoutes = [
     rtlName: "لوحة القيادة",
     icon: <HomeIcon color="inherit" />,
     component: Dashboard,
-    layout: "/admin",
-  },
-  {
-    path: "/home",
-    name: "Home",
-    rtlName: "لوحة القيادة",
-    icon: <HomeIcon color="inherit" />,
-    component: Home,
     layout: "/admin",
   },
   {
@@ -74,23 +65,23 @@ var dashRoutes = [
         component: Profile,
         layout: "/admin",
       },
-      // {
-      //   path: "/signin",
-      //   name: "Sign In",
-      //   rtlName: "لوحة القيادة",
-      //   icon: <DocumentIcon color="inherit" />,
-      //   component: SignIn,
-      //   layout: "/auth",
-      // },
-      // {
-      //   path: "/signup",
-      //   name: "Sign Up",
-      //   rtlName: "لوحة القيادة",
-      //   icon: <RocketIcon color="inherit" />,
-      //   secondaryNavbar: true,
-      //   component: SignUp,
-      //   layout: "/auth",
-      // },
+      {
+        path: "/signin",
+        name: "Sign In",
+        rtlName: "لوحة القيادة",
+        icon: <DocumentIcon color="inherit" />,
+        component: SignIn,
+        layout: "/auth",
+      },
+      {
+        path: "/signup",
+        name: "Sign Up",
+        rtlName: "لوحة القيادة",
+        icon: <RocketIcon color="inherit" />,
+        secondaryNavbar: true,
+        component: SignUp,
+        layout: "/auth",
+      },
     ],
   },
 ];

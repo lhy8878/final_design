@@ -6,7 +6,7 @@ import Footer from 'components/Footer/Footer.js';
 import AdminNavbar from 'components/Navbars/AdminNavbar.js';
 import Sidebar from 'components/Sidebar';
 import React, { useState } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch} from 'react-router-dom';
 import routes from 'routes.js';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -24,7 +24,7 @@ export default function Dashboard(props) {
 	const [ sidebarVariant, setSidebarVariant ] = useState('transparent');
 	const [ fixed, setFixed ] = useState(false);
 	// const [ unCollapse, setunCollapse ] = useState(false);
-	const [ unCollapse, setunCollapse ] = useState(true);
+	const [ unCollapse, setunCollapse ] = useState(false);
 	// functions for changing the states from components
 	const getRoute = () => {
 		return window.location.pathname !== '/admin/full-screen-maps';
